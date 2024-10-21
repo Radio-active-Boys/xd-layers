@@ -1,4 +1,3 @@
-C:/Users/visha/Downloads/RobogenSlicer/build/CMakeFiles/RobogenSlicer.dir
-C:/Users/visha/Downloads/RobogenSlicer/build/CMakeFiles/clean-all.dir
+C:/Users/visha/Downloads/RobogenSlicer/build/CMakeFiles/MyRobogenApp.dir
 C:/Users/visha/Downloads/RobogenSlicer/build/CMakeFiles/ALL_BUILD.dir
 C:/Users/visha/Downloads/RobogenSlicer/build/CMakeFiles/ZERO_CHECK.dir

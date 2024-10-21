@@ -3,6 +3,6 @@ mkdir build
 cd build
 cmake ..
 cmake --build .
-cd bin/Debug
+cd Debug
 cls
-.\run Leg.stl
+.\run cube.stl

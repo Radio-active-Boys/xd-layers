@@ -2,14 +2,14 @@
 #include <iostream>
 #include <string>
 
-#include "Slicer.h"
+#include "RobogenSlicer.h"  // Ensure this path is correct
 using namespace std;
 
 int main(int argc, char* argv[])
 {
     const char* filename = argc < 2 ? "cube.stl" : argv[1];
-    Slicer slicer(filename);  // eliipticalvase.stl
-    slicer.slicing();
+    RobogenSlicer Rslicer(filename);  // Create an instance of RobogenSlicer
+    Rslicer.slicing();  // Call the slicing method
 
     return 0;
 }
