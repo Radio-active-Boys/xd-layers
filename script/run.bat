@@ -3,6 +3,6 @@ mkdir build
 cd build
 cmake ..
 cmake --build .
-cd Debug
+cd bin/Debug
 cls
 .\run cube.stl

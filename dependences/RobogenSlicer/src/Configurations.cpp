@@ -1,8 +1,8 @@
 #include "Configurations.h"
 using namespace std;
 
-string stl_filePath   = "./stl_files/";    // directory for storing stl files
-string gcode_filePath = "./gcode_files/";  // directory for storing gcode files
+string stl_filePath   = "C:/Users/visha/Downloads/RobogenSlicer/src/stl";    // directory for storing stl files
+string gcode_filePath = "C:/Users/visha/Downloads/RobogenSlicer/src/stl/gcode_files";  // directory for storing gcode files
 
 double thr = 0.000000001;        // Threshold
 double dzEachLevel = 1;          // high for mm to assign to one level

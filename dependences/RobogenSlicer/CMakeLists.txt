@@ -57,8 +57,6 @@ add_custom_target(clean-all
     COMMENT "Cleaning up build files..."
 )
 
-
-
 # # Add the executable
 # add_executable(${PROJECT_NAME} ${SOURCES})
 
