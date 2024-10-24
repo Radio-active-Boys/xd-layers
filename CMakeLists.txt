@@ -6,41 +6,45 @@ project(MyRobogenApp)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_BUILD_TYPE Debug)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
 
-# Define the source files
-set(SOURCES
-    src/main.cpp  # Replace with your actual source files
-    # src/other_file.cpp  # Add additional source files here if necessary
+# Include directories for headers and dependencies
+include_directories( 
+                    ${CMAKE_SOURCE_DIR}/include
+                    if(WIN32)
+                    # Include the directory that contains unistd.h
+                    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/dependencies/RobogenSlicer/include/unistd_h)
+                    endif()
+                    ${CMAKE_SOURCE_DIR}/dependencies/RobogenSlicer/include
+
+
 )
 
-# Include directories for headers
-if(WIN32)
-    # Include the directory that contains unistd.h
-    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/dependences/RobogenSlicer/include/unistd_h)
-endif()
+add_subdirectory(${CMAKE_SOURCE_DIR}/dependencies/RobogenSlicer)
 
-# Include directories for RobogenSlicer headers
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/dependences/RobogenSlicer/include)
+# Source files (using GLOB_RECURSE to automatically include all .cpp files)
+file(GLOB_RECURSE SOURCES
+    ${CMAKE_SOURCE_DIR}/src/*.cpp
+)
 
 # Add the executable
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-# Link the RobogenSlicer library after defining the target
-target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/dependences/RobogenSlicer/lib/Debug/RobogenSlicer.lib)
 
-# Specify output directory for the executable
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/bin
-)
+# Link RobogenSlicer library
+target_link_libraries(MyRobogenApp PRIVATE RobogenSlicer) 
 
-# Optionally, set the output name (useful if you want a specific name)
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    OUTPUT_NAME "run"
-)
+
+# Export compile commands for tooling
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Set parallel build level
+set(CMAKE_BUILD_PARALLEL_LEVEL 8)
 
 # Add a custom clean target
 add_custom_target(clean-all
-    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_CURRENT_SOURCE_DIR}/bin
+    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_CURRENT_SOURCE_DIR}
     COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_CURRENT_BINARY_DIR}
     COMMENT "Cleaning up build files..."
 )

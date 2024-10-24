@@ -1,8 +1,10 @@
 cd ..
+rm -r build
 mkdir build
 cd build
 cmake ..
 cmake --build .
-cd bin/Debug
-cls
-.\run cube.stl
+ls
+cd ../src/Debug
+ls
+.\run Leg.stl

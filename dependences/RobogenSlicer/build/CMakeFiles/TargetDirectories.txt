@@ -1,5 +1,0 @@
-C:/Users/visha/Downloads/RobogenSlicer/dependences/RobogenSlicer/build/CMakeFiles/RobogenSlicer.dir
-C:/Users/visha/Downloads/RobogenSlicer/dependences/RobogenSlicer/build/CMakeFiles/clean-all.dir
-C:/Users/visha/Downloads/RobogenSlicer/dependences/RobogenSlicer/build/CMakeFiles/INSTALL.dir
-C:/Users/visha/Downloads/RobogenSlicer/dependences/RobogenSlicer/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/visha/Downloads/RobogenSlicer/dependences/RobogenSlicer/build/CMakeFiles/ZERO_CHECK.dir

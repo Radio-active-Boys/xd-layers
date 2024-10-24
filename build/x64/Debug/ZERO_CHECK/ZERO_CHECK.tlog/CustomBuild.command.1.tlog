@@ -1,6 +1,6 @@
-^C:\USERS\VISHA\DOWNLOADS\ROBOGENSLICER\BUILD\CMAKEFILES\3F9F7A5D82323FC4CA3019163175EB81\GENERATE.STAMP.RULE
+^C:\USERS\VISHA\DOWNLOADS\TARGETTOAPPLY\XDSLICER\BUILD\CMAKEFILES\A0F23643B6E8B24F670BB495841D46DE\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/visha/Downloads/RobogenSlicer -BC:/Users/visha/Downloads/RobogenSlicer/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/visha/Downloads/RobogenSlicer/build/MyRobogenApp.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/visha/Downloads/TargetToApply/xDSlicer -BC:/Users/visha/Downloads/TargetToApply/xDSlicer/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/visha/Downloads/TargetToApply/xDSlicer/build/MyRobogenApp.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
