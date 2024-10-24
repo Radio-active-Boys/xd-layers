@@ -7,8 +7,8 @@ string gcode_filePath = "/home/ragnar/Documents/Robogen/layer/build/";  // direc
 
 double thr = 0.000000001;        // Threshold
 double dzEachLevel = 1;          // high for mm to assign to one level
-double centerX           = 100;  // center X
-double centerY           = 100;  // center Y
+double centerX           = 0;  // center X
+double centerY           = 0;  // center Y
 double centerZ           = 0;    // center Z
 bool needMoveToCenter    = true;
 bool needSupportMaterial = true;

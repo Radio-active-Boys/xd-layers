@@ -25,7 +25,7 @@ int Stl::read(string& stl_target, bool isBinary)
     else
         numTriangles = readASCII(stl_target);
     setMinAndMax();
-    if (needMoveToCenter) moveToCenter();
+  if (needMoveToCenter) moveToCenter();
     assignTriangles();
     return numTriangles;
 }
