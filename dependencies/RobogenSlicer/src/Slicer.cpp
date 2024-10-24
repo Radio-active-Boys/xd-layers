@@ -15,12 +15,7 @@ Slicer::Slicer(std::string& filename) : Slicer(filename.c_str()) {}
 Slicer::Slicer(const char* filename) 
     : checkLayers(nullptr), finishedCount(0) // Initialize checkLayers and finishedCount
 {
-#if defined(_WIN32) || defined(_WIN64)
-    _mkdir(gcode_filePath.c_str());  // Windows specific mkdir
-#else
-    std::string mkdir = "mkdir -p ";
-    int res = system(mkdir.append(gcode_filePath.c_str()).c_str());
-#endif
+
 
     // Determine if the STL file is binary
     int extensionLen = 3;
@@ -35,9 +30,9 @@ Slicer::Slicer(const char* filename)
 
     // Change the file extension from ".stl" to ".gcode"
     stl_target = stl_filePath;
-    stl_target.append(filename);
+    stl_target = filename;
     gcode_target = gcode_filePath;
-    gcode_target.append(filename, strlen(filename) - extensionLen);
+    gcode_target = filename;
     gcode_target.append("gcode");
     remove(gcode_target.c_str());  // Remove old gcode file
 

@@ -1,0 +1,98 @@
+[
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/MyRobogenApp.dir/src/main.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/src/main.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/src/main.cpp",
+  "output": "CMakeFiles/MyRobogenApp.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/BufferReadBinary.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/BufferReadBinary.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/BufferReadBinary.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/BufferReadBinary.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/BufferWrite.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/BufferWrite.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/BufferWrite.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/BufferWrite.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/Configurations.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Configurations.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Configurations.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/Configurations.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/Cross.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Cross.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Cross.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/Cross.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/DoubleToString.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/DoubleToString.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/DoubleToString.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/DoubleToString.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/GCode.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/GCode.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/GCode.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/GCode.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/Layer.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Layer.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Layer.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/Layer.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/Loop.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Loop.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Loop.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/Loop.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/RobogenSlicer.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/RobogenSlicer.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/RobogenSlicer.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/RobogenSlicer.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/STL.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/STL.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/STL.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/STL.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/Slicer.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Slicer.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Slicer.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/Slicer.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/Slicing.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Slicing.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Slicing.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/Slicing.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/Triangle.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Triangle.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Triangle.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/Triangle.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/Vec2d.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Vec2d.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Vec2d.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/Vec2d.cpp.o"
+},
+{
+  "directory": "/home/ragnar/Documents/Robogen/xd-layers/build/dependencies/RobogenSlicer",
+  "command": "/usr/bin/c++ -DDEBUG -I/home/ragnar/Documents/Robogen/xd-layers/include -I/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/include -g -std=gnu++17 -o CMakeFiles/RobogenSlicer.dir/src/Vec3d.cpp.o -c /home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Vec3d.cpp",
+  "file": "/home/ragnar/Documents/Robogen/xd-layers/dependencies/RobogenSlicer/src/Vec3d.cpp",
+  "output": "dependencies/RobogenSlicer/CMakeFiles/RobogenSlicer.dir/src/Vec3d.cpp.o"
+}
+]

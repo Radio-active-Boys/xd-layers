@@ -2,8 +2,8 @@
 using namespace std;
 
 
-string stl_filePath   = "C:/Users/visha/Downloads/TargetToApply/xDSlicer/src/stl_files/";    // directory for storing stl files
-string gcode_filePath = "C:/Users/visha/Downloads/TargetToApply/xDSlicer/src/gcode_files";  // directory for storing gcode files
+string stl_filePath   = "/home/ragnar/Documents/Robogen/layer/build/";    // directory for storing stl files
+string gcode_filePath = "/home/ragnar/Documents/Robogen/layer/build/";  // directory for storing gcode files
 
 double thr = 0.000000001;        // Threshold
 double dzEachLevel = 1;          // high for mm to assign to one level

@@ -16,7 +16,7 @@
 #include "Configurations.h"
 #include "Layer.h"
 #include "STL.h"
-
+#include <atomic>
 class Slicer
 {
 private:
