@@ -1,2 +1,6 @@
 *.gcode
 *.stl
+build
+.cache
+.vs
+.vscode
