@@ -1,5 +1,4 @@
 #include "Slicing.h"
-
 #include <cmath>
 #include <iostream>
 
@@ -11,9 +10,11 @@ Slicing::Slicing(Stl* stl, Layer* layer) : Slicing(*stl, *layer) {}
 Slicing::Slicing(Stl& stl, Layer& layer)
     : z(layer.getZ()), loops(layer.getLoops()), triangles(stl.getLevel(z))
 {
+
     intersection();
     mkLoop();
     Gcode g(layer);
+
 }
 
 
@@ -38,6 +39,7 @@ bool Slicing::isSectionExist(Cross& cr) const
 // More rare cases been checked more, saving whole execution time.
 void Slicing::intersection()
 {
+
     intersections.reserve(triangles.size() >> 1);
     for (const auto& t : triangles)
     {
@@ -114,6 +116,7 @@ void Slicing::intersection()
             }
         }
     }
+
 }
 
 // Combine intersections to loops
@@ -121,7 +124,7 @@ void Slicing::intersection()
 void Slicing::mkLoop()
 {
     if (intersections.empty()) return;
-#if 1  // implement with subLoops
+#if 0  // implement with subLoops
     Vec2d p1(intersections.back().p1);
     Vec2d p2(intersections.back().p2);
     Loop lp(p1, intersections.size() >> 1);
@@ -171,26 +174,93 @@ void Slicing::mkLoop()
                     i++;
             }*/
         }
-        else
-        {  // creat a new Loop
-            bool isSubLoop = false;
-            for (int i = loops.size() - 1; i >= 0; i--)
+else
+{
+    cout << "189 - Entering new loop" << endl;
+
+    // Check if there are any loops to process
+    if (!loops.empty())
+    {
+        bool isSubLoop = false;
+        for (int i = loops.size() - 1; i >= 0; i--)
+        {
+            cout << "193 - Checking loop " << i << endl;
+            isSubLoop = loops[i].checkSubLoop(lp);
+            if (isSubLoop) 
             {
-                isSubLoop = loops[i].checkSubLoop(lp);
-                if (isSubLoop) break;
-                if (lp.checkSubLoop(loops[i]))
-                {
-                    // lp.subLoops.push_back(loops[i]);
-                    loops.erase(loops.begin() + i);
-                }
+                cout << "195 - SubLoop detected, breaking" << endl;
+                break;
             }
-            if (!isSubLoop) loops.push_back(lp);
-            p1 = intersections.back().p1;
-            p2 = intersections.back().p2;
-            lp = Loop(p1, intersections.size() >> 1);
-            lp.add(p2);
-            intersections.erase(intersections.end());
+            if (lp.checkSubLoop(loops[i]))
+            {
+                cout << "199 - Erasing subloop " << i << endl;
+                loops.erase(loops.begin() + i);
+            }
         }
+        if (!isSubLoop)
+        {
+            cout << "204 - Pushing lp into loops" << endl;
+            loops.push_back(lp);
+        }
+    }
+    else
+    {
+        cout << "210 - Loops empty, adding first lp" << endl;
+        loops.push_back(lp);
+    }
+
+    cout << "214 - Updating p1 and p2" << endl;
+
+    // Safe check before updating p1 and p2
+    if (intersections.size() > 1)
+    {
+        p1 = intersections.back().p1;
+        p2 = intersections.back().p2;
+        cout << "p1: (" << p1.x << ", " << p1.y << "), p2: (" << p2.x << ", " << p2.y << ")" << endl;
+
+        // Create a new Loop from the last intersection points
+        lp = Loop(p1, intersections.size() >> 1);
+        lp.add(p2);
+
+        // Safely erase the last intersection
+        if (!intersections.empty())
+        {
+            cout << "Erasing last intersection" << endl;
+            intersections.pop_back();
+        }
+
+        cout << "Remaining intersections: " << intersections.size() << endl;
+    }
+    else if (intersections.size() == 1)
+    {
+        cout << "Only one intersection left, processing and erasing it" << endl;
+
+        // Handle the last intersection safely
+        p1 = intersections.back().p1;
+        p2 = intersections.back().p2;
+        cout << "p1: (" << p1.x << ", " << p1.y << "), p2: (" << p2.x << ", " << p2.y << ")" << endl;
+
+        // Process the last intersection and then remove it
+        lp = Loop(p1, 1);  // Last loop created from the last point
+        lp.add(p2);
+
+        intersections.pop_back();  // Erase the last intersection
+
+        cout << "Remaining intersections: 0" << endl;
+        cout << "No more intersections, exiting loop" << endl;
+        
+        // Exit the loop, or return from the function, since no more intersections
+        return;  // Or break, depending on how this block is structured
+    }
+    else
+    {
+        cout << "No intersections left, exiting loop" << endl;
+        return;  // Exit the loop when no intersections remain
+    }
+}
+
+
+
     }
     bool isSubLoop = false;
     for (int i = loops.size() - 1; i >= 0; i--)
@@ -206,6 +276,7 @@ void Slicing::mkLoop()
     if (!isSubLoop) loops.push_back(lp);
 #endif
 #if 0
+    cout<<"mkLoop Enter if 2 "<<endl;
 	//Vec2d p1(intersections.front().p1);
 	//Vec2d p2(intersections.front().p2);
 	Vec2d p1(intersections.back().p1);
@@ -265,7 +336,7 @@ void Slicing::mkLoop()
 		}
 	}
 #endif
-#if 0  // Why take more time??
+#if 1  // Why take more time??
 	int size = intersections.size();
 	bool* bools = new bool[size];
 	for (int i = 0; i < size; i++)

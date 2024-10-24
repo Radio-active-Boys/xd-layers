@@ -2,7 +2,7 @@
 
 #include <string>
 
-#define NUM_THREADS 4
+#define NUM_THREADS 32
 
 extern std::string stl_filePath;    // directory for storing stl files
 extern std::string gcode_filePath;  // directory for storing gcode files

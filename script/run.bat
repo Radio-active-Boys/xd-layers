@@ -1,10 +1,6 @@
-cd ..
-rm -r build
-mkdir build
-cd build
-cmake ..
+cd ../build
 cmake --build .
 ls
-cd ../src/Debug
-ls
-.\run Leg.stl
+cd Debug
+cls
+MyRobogenApp 
