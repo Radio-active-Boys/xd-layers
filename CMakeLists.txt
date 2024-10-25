@@ -13,8 +13,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include_directories( 
                   ${CMAKE_SOURCE_DIR}/include
                   ${CMAKE_SOURCE_DIR}/dependencies/RobogenSlicer/include
-
-
 )
 if(WIN32)
     # Include the directory that contains unistd.h
@@ -37,19 +35,14 @@ elseif(CMAKE_BUILD_TYPE MATCHES "Release")
     add_compile_definitions(RELEASE)
 endif()
 
-
 # Add the executable
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-
 # Link RobogenSlicer library
 target_link_libraries(MyRobogenApp PRIVATE RobogenSlicer) 
-
 
 # Export compile commands for tooling
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Set parallel build level
 set(CMAKE_BUILD_PARALLEL_LEVEL 8)
-
-
