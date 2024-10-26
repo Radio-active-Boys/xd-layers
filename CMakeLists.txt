@@ -12,14 +12,14 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Include directories for headers and dependencies
 include_directories( 
                   ${CMAKE_SOURCE_DIR}/include
-                  ${CMAKE_SOURCE_DIR}/dependencies/RobogenSlicer/include
+                  ${CMAKE_SOURCE_DIR}/dependencies/mistry-slicer/include
 )
 if(WIN32)
     # Include the directory that contains unistd.h
-    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/dependencies/RobogenSlicer/include/unistd_h)
+    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/dependencies/mistry-slicer/include/unistd_h)
 endif()
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/dependencies/RobogenSlicer)
+add_subdirectory(${CMAKE_SOURCE_DIR}/dependencies/mistry-slicer)
 
 # Source files (using GLOB_RECURSE to automatically include all .cpp files)
 file(GLOB_RECURSE SOURCES
@@ -39,7 +39,7 @@ endif()
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Link RobogenSlicer library
-target_link_libraries(MyRobogenApp PRIVATE RobogenSlicer) 
+target_link_libraries(MyRobogenApp PRIVATE mistry-slicer) 
 
 # Export compile commands for tooling
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)

@@ -1,0 +1,3 @@
+[submodule "dependencies/mistry-slicer"]
+	path = dependencies/mistry-slicer
+	url = https://github.com/ragnar-vallhala/mistry-slicer.git
